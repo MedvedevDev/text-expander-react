@@ -17,7 +17,7 @@ function App() {
       Biking adventures have given us amazing memories and have inspired new generations to get out and explore the world on two wheels. Cycling is a pretty awesome thing to think about. Who knows what new paths and places we'll discover next!
      </TextExpander>
     </>
-  )
+  ) 
 }
 
 export default App
