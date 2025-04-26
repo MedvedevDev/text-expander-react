@@ -4,7 +4,7 @@ export default function TextExpander({
   collapseNumWords = 10,
   expandButtonText = "Show more",
   collapseButtonText = "Show less",
-  buttonColor,
+  buttonColor = "#1f09cd",
   expanded = false,
   className,
   children,
@@ -16,10 +16,20 @@ export default function TextExpander({
   function handleExpand(expanded) {
     setIsExpanded(!expanded)
   }
+
+  const buttonStyle = {
+    background: "none",
+    color: buttonColor,
+    marginLeft: "6px",
+    border: "none",
+    cursor: "pointer",
+    font: "inherit"
+  }
+
   return (
     <div className={className}>
       <span> {displayText} </span>
-      <button style={{backgroundColor: buttonColor}} onClick={() => handleExpand(isExpanded)}>{isExpanded ? collapseButtonText : expandButtonText}</button>
+      <button style={buttonStyle} onClick={() => handleExpand(isExpanded)}>{isExpanded ? collapseButtonText : expandButtonText}</button>
     </div>
   );
 }
